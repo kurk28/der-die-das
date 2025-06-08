@@ -1,0 +1,12 @@
+.scorePanel {
+  display: flex;
+  justify-content: center;
+}
+
+.score {
+  font-size: 16px;
+}
+
+.score:first-child {
+  margin-right: 20px;
+}
