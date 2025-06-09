@@ -1,0 +1,15 @@
+.scoreContainer {
+  margin: 40px 0;
+}
+
+.tileContainer {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0;
+}
+
+.buttonsPanel {
+  display: flex;
+  align-items: stretch;
+  gap: 2px;
+}
