@@ -5,6 +5,6 @@
   border: none;
   background-color: beige;
   font: bold;
-  font-size: 20px;
+  font-size: var(--font-size-l);
   cursor: pointer;
 }

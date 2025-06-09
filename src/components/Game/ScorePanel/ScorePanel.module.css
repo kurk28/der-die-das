@@ -4,7 +4,7 @@
 }
 
 .score {
-  font-size: 16px;
+  font-size: var(--font-size-s);
 }
 
 .score:first-child {

@@ -5,7 +5,7 @@ import { Tile } from './Tile/Tile';
 
 export const Game = () => {
   return (
-    <>
+    <div class={styles.game}>
       <div>
         <div class={styles.scoreContainer}>
           <ScorePanel correctScore={10} fallScore={2} />
@@ -28,6 +28,6 @@ export const Game = () => {
           name={'das'}
         />
       </div>
-    </>
+    </div>
   );
 };
