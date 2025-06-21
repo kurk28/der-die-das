@@ -19,3 +19,8 @@
 .gameContainer {
   height: 100%;
 }
+
+.chooseGameContainer {
+  display: flex;
+  flex-direction: column;
+}
