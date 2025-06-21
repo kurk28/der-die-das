@@ -15,7 +15,7 @@ export default defineConfig({
   },
   test: {
     setupFiles: ['node_modules/@testing-library/jest-dom/vitest'],
-    dir: './tests/unit/',
+    dir: './src/',
     environment: 'jsdom',
     globals: true,
     // if you have few tests, try commenting this

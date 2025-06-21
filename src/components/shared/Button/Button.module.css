@@ -1,0 +1,28 @@
+.button {
+  padding: var(--margin-s);
+  border: solid;
+  color: var(--white-color);
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  font-size: var(--font-size-s);
+}
+
+.button--blue {
+  background-color: var(--bright-blue);
+}
+
+.button--green {
+  background-color: var(--teal-green);
+}
+
+.button--red {
+  background-color: var(--terra-red);
+}
+
+.button--yellow {
+  background-color: var(--golden-yellow);
+}
+
+.test {
+  border-radius: 50%;
+}
