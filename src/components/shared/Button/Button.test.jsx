@@ -8,12 +8,12 @@ const testId = 'button';
 const onClickMock = vi.fn();
 const user = userEvent.setup();
 
-describe('Button', () => {
+describe('Button:', () => {
   afterEach(() => {
     vi.restoreAllMocks();
   });
 
-  test('should be in the DOM', async () => {
+  test('should be in the DOM', () => {
     const { getByTestId } = render(() => <Button onClick={onClickMock} />);
     expect(getByTestId(testId)).toBeInTheDocument();
   });
@@ -25,7 +25,7 @@ describe('Button', () => {
     expect(onClickMock).toHaveBeenCalledTimes(1);
   });
 
-  test('should have .button--blue class', async () => {
+  test('should have .button--blue class', () => {
     const { getByTestId } = render(() => (
       <Button onClick={onClickMock} color="blue" />
     ));
@@ -33,7 +33,7 @@ describe('Button', () => {
     expect(button).toHaveClass(styles['button--blue']);
   });
 
-  test('should have .button--green class', async () => {
+  test('should have .button--green class', () => {
     const { getByTestId } = render(() => (
       <Button onClick={onClickMock} color="green" />
     ));
@@ -41,7 +41,7 @@ describe('Button', () => {
     expect(button).toHaveClass(styles['button--green']);
   });
 
-  test('should have .button--yellow class', async () => {
+  test('should have .button--yellow class', () => {
     const { getByTestId } = render(() => (
       <Button onClick={onClickMock} color="yellow" />
     ));
@@ -49,7 +49,7 @@ describe('Button', () => {
     expect(button).toHaveClass(styles['button--yellow']);
   });
 
-  test('should have .button--red class', async () => {
+  test('should have .button--red class', () => {
     const { getByTestId } = render(() => (
       <Button onClick={onClickMock} color="red" />
     ));

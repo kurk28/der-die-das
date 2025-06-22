@@ -11,10 +11,11 @@ import { children } from 'solid-js';
  */
 export const Button = (props) => {
   const c = children(() => props.children);
+
   return (
     <button
-      class={styles.button}
-      onclick={props.onClick}
+      class={`${styles.button} ${props.class ? props.class : ''}`}
+      onClick={props.onClick}
       classList={{
         [styles['button--blue']]: props.color === 'blue',
         [styles['button--green']]: props.color === 'green',
