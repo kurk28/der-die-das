@@ -3,9 +3,12 @@
 
 import { defineConfig } from 'vite';
 import solidPlugin from 'vite-plugin-solid';
+import { resolve } from 'path';
 
 export default defineConfig({
+  root: '.',
   plugins: [solidPlugin()],
+  publicDir: resolve(__dirname, 'public'),
   server: {
     port: 6767,
   },
@@ -26,6 +29,9 @@ export default defineConfig({
     target: 'esnext',
   },
   resolve: {
+    alias: {
+      '@src': resolve(__dirname, 'src'),
+    },
     conditions: ['development', 'browser'],
   },
 });
