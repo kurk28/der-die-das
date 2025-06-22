@@ -1,0 +1,19 @@
+.input {
+  min-height: 50px;
+  width: 100%;
+  padding: 0 var(--padding-s);
+  margin-bottom: var(--margin-s);
+}
+
+.button {
+  margin-bottom: var(--margin-s);
+  width: 100%;
+}
+
+.chain-preview {
+  display: flex;
+  row-gap: var(--margin-m);
+  justify-content: start;
+  flex-wrap: wrap;
+  margin-bottom: var(--margin-m);
+}

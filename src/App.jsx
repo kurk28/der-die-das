@@ -4,6 +4,7 @@ import { Header } from './components/Header/Header';
 import { Game } from './components/Game/Game';
 import { WordsInput } from './components/WordsInput/WordsInput';
 import { Button } from './components/shared/Button/Button';
+import { InputChain } from './components/InputChain/InputChain';
 
 export const App = () => {
   const [page, setPage] = createSignal(0);
@@ -32,7 +33,7 @@ export const App = () => {
           </Match>
           <Match when={page() === 2}>
             <div class={styles.gameContainer}>
-              <Game />
+              <InputChain />
             </div>
           </Match>
         </Switch>
