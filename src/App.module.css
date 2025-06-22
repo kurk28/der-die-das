@@ -18,6 +18,7 @@
 
 .gameContainer {
   height: 100%;
+  margin: 0 var(--margin-m);
 }
 
 .chooseGameContainer {

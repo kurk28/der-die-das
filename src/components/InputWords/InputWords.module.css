@@ -1,0 +1,35 @@
+/* .input {
+  min-height: 50px;
+  width: 100%;
+  padding: 0 var(--padding-s);
+  margin-bottom: var(--margin-s);
+} */
+
+.input {
+  width: 100%;
+  padding: var(--padding-xs);
+}
+
+.button {
+  margin-bottom: var(--margin-s);
+  width: 100%;
+}
+
+.chain-preview {
+  display: flex;
+  row-gap: var(--margin-m);
+  justify-content: start;
+  flex-wrap: wrap;
+  margin-bottom: var(--margin-m);
+}
+
+.word-input-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--margin-s);
+  margin-bottom: var(--margin-s);
+}
+
+.label {
+  font-size: var(--font-size-s);
+}
