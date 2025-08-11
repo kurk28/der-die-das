@@ -1,8 +1,9 @@
 import styles from './Game.module.css';
 import { createSignal, createMemo } from 'solid-js';
-import { GenderSelectorButton } from './GenderSelectorButton/GenderSelectorButton';
 import { ScorePanel } from './ScorePanel/ScorePanel';
 import { Tile } from './Tile/Tile';
+import { Dialog } from '../Dialog/Dialog';
+import { Button } from '../shared/Button/Button';
 
 export const Game = (props) => {
   const [correctScore, setCorrectScore] = createSignal(0);
@@ -21,6 +22,7 @@ export const Game = (props) => {
 
   return (
     <div class={styles.game}>
+      <Dialog correct={correctScore} fall={fallScore} />
       <div>
         <div class={styles.scoreContainer}>
           <ScorePanel correctScore={correctScore()} fallScore={fallScore()} />
@@ -30,18 +32,28 @@ export const Game = (props) => {
         <Tile word={chain()[1]} />
       </div>
       <div class={styles.buttonsPanel}>
-        <GenderSelectorButton
-          onButtonClick={() => onArticleClick('der')}
-          name={'der'}
-        />
-        <GenderSelectorButton
-          onButtonClick={() => onArticleClick('die')}
-          name={'die'}
-        />
-        <GenderSelectorButton
-          onButtonClick={() => onArticleClick('das')}
+        <Button
+          class={styles.genderBtn}
+          color="blue"
+          onClick={() => onArticleClick('der')}
+        >
+          Der
+        </Button>
+        <Button
+          class={styles.genderBtn}
+          color="red"
+          onClick={() => onArticleClick('die')}
+        >
+          Die
+        </Button>
+        <Button
+          class={styles.genderBtn}
+          color="green"
+          onClick={() => onArticleClick('das')}
           name={'das'}
-        />
+        >
+          Das
+        </Button>
       </div>
     </div>
   );
