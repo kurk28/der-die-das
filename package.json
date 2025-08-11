@@ -9,7 +9,9 @@
     "build": "vite build",
     "serve": "vite preview",
     "test:unit": "vitest",
-    "test:e2e": "pnpm exec playwright test"
+    "test:e2e": "pnpm exec playwright test",
+    "lint": "npx eslint ./src/",
+    "format": "npx prettier ./src/ --write"
   },
   "license": "MIT",
   "devDependencies": {
@@ -19,9 +21,11 @@
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/user-event": "^14.6.1",
     "@types/node": "^22.15.30",
-    "eslint": "^9.28.0",
+    "eslint": "^9.32.0",
+    "eslint-plugin-solid": "^0.14.5",
     "globals": "^16.2.0",
     "jsdom": "^25.0.1",
+    "prettier": "3.6.0",
     "typescript": "^5.8.3",
     "vite": "^6.3.5",
     "vite-plugin-solid": "^2.11.6",
