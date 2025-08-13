@@ -1,13 +1,13 @@
 import js from '@eslint/js';
-import solid from 'eslint-plugin-solid';
+import solid from 'eslint-plugin-solid/configs/recommended';
 import globals from 'globals';
 import { defineConfig } from 'eslint/config';
 
 export default defineConfig([
+  js.configs.recommended,
+  solid,
   {
     files: ['**/*.{js,mjs,cjs,jsx}'],
-    plugins: { js, solid },
-    extends: ['js/recommended', 'solid/recommended'],
     rules: {
       'no-unused-vars': [
         'error',
