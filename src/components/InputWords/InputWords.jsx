@@ -1,7 +1,4 @@
 import styles from './InputWords.module.css';
-import StoreContext from '@src/store/store';
-import { createStore } from 'solid-js/store';
-import { For, Show, useContext, createEffect } from 'solid-js';
 import { Button } from '../shared/Button/Button';
 
 export const InputWords = (props) => {
@@ -27,9 +24,8 @@ export const InputWords = (props) => {
           wrap="soft"
           placeholder="der Stuhl, der Tisch, die Lampe"
           class={styles.input}
-        >
-          der Der, die Die, das Das
-        </textarea>
+          data-testid="words-input"
+        />
       </div>
 
       <Button class={styles.button} onClick={onSaveChainBtnClick} color="blue">

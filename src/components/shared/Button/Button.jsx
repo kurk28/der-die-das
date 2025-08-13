@@ -6,7 +6,7 @@ import { children } from 'solid-js';
  *
  * @param {Object} props - component props
  * @param {'blue' | 'green' | 'red' | 'yellow'} [props.color] - button color variant
- * @param {Function} props.onClick - click event handler
+ * @param {Function} [props.onClick] - click event handler
  * @param {any} [props.children] - button content
  */
 export const Button = (props) => {

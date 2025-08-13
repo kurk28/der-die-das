@@ -7,34 +7,12 @@ import { InputWords } from './components/InputWords/InputWords';
 
 export const App = () => {
   const [page, setPage] = createSignal(0);
-  const [chains, setChains] = createSignal([]);
-  const [shownWord, setShownWord] = createSignal('');
-
-  let repeat = [];
-  let index = 0;
+  const [words, setWords] = createSignal([]);
 
   const onSaveChain = (str) => {
     const words = str.trim().split(',');
-    setChains(words);
-    setShownWord(words[0].trim());
+    setWords(words);
     setPage(2);
-  };
-  const setNextWordIndex = () => {
-    if (index < chains().length - 1) {
-      index += 1;
-      setShownWord(chains()[index].trim());
-    } else {
-      index = 0;
-      setShownWord(chains()[index].trim());
-    }
-  };
-  const saveWord = (word) => {
-    repeat.push(word);
-  };
-  const correct = () => setNextWordIndex();
-  const fall = (word) => {
-    saveWord(word);
-    setNextWordIndex();
   };
 
   return (
@@ -61,7 +39,7 @@ export const App = () => {
           </Match>
           <Match when={page() === 2}>
             <div>
-              <Game word={shownWord()} correct={correct} fall={fall} />
+              <Game words={words()} />
             </div>
           </Match>
         </Switch>
