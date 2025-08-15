@@ -16,6 +16,7 @@
   "license": "MIT",
   "devDependencies": {
     "@eslint/js": "^9.28.0",
+    "@html-eslint/eslint-plugin": "^0.45.0",
     "@playwright/test": "^1.52.0",
     "@solidjs/testing-library": "^0.8.10",
     "@testing-library/jest-dom": "^6.6.3",
